@@ -24,27 +24,20 @@ A fully functional Income Expense Calculator built using **HTML**, **Tailwind CS
 
 ---
 
-##  Getting Started
+##  Getting Started 
 
-1. **Download or Clone the Repository**
 
-   ```bash
-   git clone https://github.com/your-username/income-expense-calculator.git
-   ```
-
-2. **Open `index.html` in your browser**
+1. **Open `index.html` in your browser**
 
 ---
 
 ##  Folder 
 
-```
 
-├── index.html
-├── README.md
-```
+ index.html
+ script.js
+ README.md
 
----
 
 ## page Overview
 
