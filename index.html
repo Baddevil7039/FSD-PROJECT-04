@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income Expense Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-4">
+  <div class="max-w-3xl mx-auto bg-white p-6 rounded-xl shadow-md">
+    <h1 class="text-2xl font-bold text-center mb-4">Income Expense Calculator</h1>
+
+    <!-- Balance Summary -->
+    <div class="flex justify-between mb-4">
+      <div>
+        <p class="text-green-600 font-semibold">Total Income: ₹<span id="totalIncome">0</span></p>
+        <p class="text-red-600 font-semibold">Total Expense: ₹<span id="totalExpense">0</span></p>
+      </div>
+      <div class="text-xl font-bold">Balance: ₹<span id="netBalance">0</span></div>
+    </div>
+
+    <!-- Entry Form -->
+    <form id="entryForm" class="mb-4 grid grid-cols-1 md:grid-cols-3 gap-2">
+      <input type="text" id="description" placeholder="Description" required
+        class="p-2 border rounded w-full">
+      <input type="number" id="amount" placeholder="Amount" required class="p-2 border rounded w-full">
+      <select id="type" class="p-2 border rounded w-full">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button type="submit" class="bg-blue-500 text-white p-2 rounded col-span-1 md:col-span-3">Add Entry</button>
+    </form>
+
+    <div class="mb-4">
+      <button id="resetBtn" class="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded">Reset</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex gap-4 mb-4">
+      <label><input type="radio" name="filter" value="all" checked class="mr-1">All</label>
+      <label><input type="radio" name="filter" value="income" class="mr-1">Income</label>
+      <label><input type="radio" name="filter" value="expense" class="mr-1">Expense</label>
+    </div>
+
+    <!-- Entries List -->
+    <ul id="entryList" class="space-y-2"></ul>
+  </div>
+  <script src="script.js"></script>
+ </body>
+
+</html>
